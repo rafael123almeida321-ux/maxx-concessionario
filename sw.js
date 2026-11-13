@@ -4,7 +4,7 @@
    - Imagens e fontes: usa a cópia guardada e atualiza por trás.
    - /api (assistente de IA) nunca é guardado.
    Ao publicar uma versão nova, suba o número em CACHE. */
-const CACHE = 'painel-maxxs-v2';
+const CACHE = 'painel-maxxs-v3';
 const SHELL = [
   "painel.html",
   "assets/css/painel.css",

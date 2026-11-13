@@ -4,14 +4,15 @@ Projeto da agência CLYENT (dono: Rafael) para apresentar ao Grupo Maxxs Work Mu
 Fale com o Rafael em português informal, explique passo a passo (ele está aprendendo programação) e mostre o resultado no navegador antes de commitar.
 
 ## Estado atual (prévia de apresentação)
-- `DEMO_FICTICIO = true` em store.js: o PAINEL mostra vendas, leads, equipe e valores de EXEMPLO (aviso “Modo demonstração”); o SITE mostra só o estoque real (35 carros do portal Napista + site da loja em 13/11/2026). Custo/FIPE/dias dos carros são estimados só para a demo.
+- `DEMO_FICTICIO = true` em store.js: o PAINEL mostra vendas, leads, equipe e valores de EXEMPLO (aviso “Modo demonstração”); o SITE mostra só o estoque real (34 carros do site da loja, com foto). Custo/FIPE/dias dos carros são estimados só para a demo.
 - Login do painel: Diretoria / `maxxs123`; vendedores de exemplo com senha 1234.
 - Sem banco online: `SB` vazio em store.js → tudo no aparelho (localStorage, chave `maxxs_db_v1`).
 - Todas as páginas têm `<meta name="robots" content="noindex">` (é prévia). Tirar quando o domínio oficial apontar para cá.
 - **Identidade (13/11/2026, enviada pelo Rafael): vermelho racing + grafite + branco.** Tokens só no `:root` de site.css (`--brand #D40000`, `--brand-vivid #E10600`, `--brand-deep #A80000`, `--graphite #111318`, `--black #0B0B0B`, `--ice #F7F7F8`, `--border #E5E7EB`, `--text-2 #6B7280`; `--gold*` = destaque por herança) e painel.css (`--gold #E10600` no tema escuro). Bordas neutras (`--line = #E5E7EB`); vermelho só em ações e destaques. Nada de azul de marca.
 - Fonte dos títulos: Montserrat (self-hosted, 600–900, itálico 800/900); texto em Manrope.
 - Logo vetorial própria inspirada na referência (monograma MW: M vermelho, W grafite/prata, arco vermelho): `assets/img/logo.svg` (fundo claro), `logo-branco.svg` (fundo escuro), `monograma*.svg`, `icone.svg`, PNG transparentes (`logo.png`, `logo-branco.png`, `monograma*.png`), favicon e ícones do app em `assets/img/app/`. Gerada por script (fontTools + Montserrat). Se a loja mandar o arquivo original da logo, troque esses arquivos.
-- Fotos: só Peugeot 208 e Prisma têm foto (links do site atual da loja); os outros usam o cartão “fotos em breve”.
+- Estoque (VERSION 6): 34 carros reais lidos do site atual da loja (plataforma BNDV, endpoint `/Home/ListaEstoque`, 13/11/2026) com 1 foto por carro (links do CDN da BNDV), cor e final da placa (`finalPlaca`; placa completa nunca vai para o site). Sandero 2017 e 308 estavam sem preço lá: usamos o preço do portal Napista. Prisma Joy 2010 ficou de fora (sem preço e sem foto). Fotos são links externos: se a loja trocar de sistema, subir as fotos pelo painel.
+- Duas lojas confirmadas na descrição dos anúncios da própria loja: “Av. Marechal Tito, 2323 • 1881”. Telefones: (11) 2537-8630 (WhatsApp), (11) 3467-4211 e (11) 4215-6340.
 - Pendências: logo e cores reais, fotos, cor/opcionais dos carros, CNPJ, e-mail, equipe real; depois `DEMO_FICTICIO = false`.
 
 ## Visão geral
