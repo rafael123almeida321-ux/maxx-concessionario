@@ -1,0 +1,51 @@
+﻿Marca;Modelo;Versão;Ano;KM;Preço;Cor;Câmbio;Combustível;Carroceria;Status;Destaque
+Chevrolet;Onix;LT 1.0 SPE/4;2019;117000;58900;;Manual;Flex;Hatch;À venda;Não
+Chevrolet;S-10;Colina 2.8 TD 4x4 Cabine Dupla;2010;284000;65900;;Manual;Diesel;Picape;À venda;Não
+Ford;Fiesta;Class 1.0 8V Flex;2008;356000;22900;;Manual;Flex;Hatch;À venda;Não
+Fiat;Mobi;Like 1.0;2024;61800;61900;;Manual;Flex;Hatch;À venda;Não
+Subaru;Forester;XT 2.5 Turbo 4x4 Aut.;2010;196476;53900;;Automático;Flex;SUV;À venda;Não
+Hyundai;HB20;Comfort Plus 1.0;2017/2018;160100;57900;Prata;Manual;Flex;Hatch;À venda;Não
+Toyota;Corolla;GLi 1.8 Flex Aut.;2011;217000;59900;;Automático;Flex;Sedã;À venda;Não
+Nissan;Versa;V-Drive 1.6;2021;83000;62900;Branco;Manual;Flex;Sedã;À venda;Não
+Ford;Fiesta;1.5 16V Flex;2015;140000;46900;;Manual;Flex;Hatch;À venda;Não
+Toyota;Corolla;GLi 1.8 Multidrive;2016;206000;79900;;Automático;Flex;Sedã;À venda;Não
+Fiat;Strada;Trekking 1.6 Locker Cabine Dupla;2016;199000;63900;Branco;Manual;Flex;Picape;À venda;Não
+Fiat;Palio;Fire 1.0 Flex;2016;145000;35900;;Manual;Flex;Hatch;À venda;Não
+Fiat;Idea;Adventure 1.8 Dualogic;2010;124573;34900;;Automatizado;Flex;Hatch;À venda;Não
+Peugeot;207;SW XR 1.4 Flex;2011;138200;20900;;Manual;Flex;Hatch;À venda;Não
+Hyundai;I30;2.0 16V Aut.;2010;226100;49900;;Automático;Flex;Hatch;À venda;Não
+Volkswagen;Jetta;2.5 20V Tiptronic;2008/2009;187455;43900;Preto;Automático;Gasolina;Sedã;À venda;Não
+Chevrolet;Agile;LTZ 1.4 Econoflex;2011;156200;40900;;Manual;Flex;Hatch;À venda;Não
+Fiat;Mobi;Like 1.0;2023;61000;54900;;Manual;Flex;Hatch;À venda;Não
+Peugeot;208;Griffe 1.6 Aut.;2018/2019;123000;59900;Branco;Automático;Flex;Hatch;À venda;Não
+Nissan;Kicks;Exclusive 1.6 CVT;2023;95500;99900;Azul;Automático;Flex;SUV;À venda;Não
+Ford;EcoSport;Titanium 2.0 Powershift;2015;153000;49900;;Automático;Flex;SUV;À venda;Não
+Chevrolet;Corsa Sedan;Premium 1.4 Econoflex;2009;129000;33900;;Manual;Flex;Sedã;À venda;Não
+Honda;Civic;LXR 2.0 i-VTEC Aut.;2015;103400;69900;;Automático;Flex;Sedã;À venda;Não
+Kia;Soul;EX 1.6 Aut.;2017;110300;79900;;Automático;Flex;SUV;À venda;Não
+Kia;Soul;EX 1.6 Flex;2012/2013;160000;52900;Cinza;Manual;Flex;SUV;À venda;Não
+Hyundai;HB20;Comfort 1.0;2016/2017;196000;59900;Prata;Manual;Flex;Hatch;À venda;Não
+Fiat;Argo;Drive 1.0 Flex;2021;150000;54900;;Manual;Flex;Hatch;À venda;Não
+Hyundai;Creta;Attitude 1.6 Aut.;2018/2019;120000;88900;Preto;Automático;Flex;SUV;À venda;Não
+Hyundai;Elantra;GLS 2.0 Flex Aut.;2013;147000;59900;;Automático;Flex;Sedã;À venda;Não
+Chevrolet;Tracker;1.0 Turbo Aut.;2021;85000;87900;;Automático;Flex;SUV;À venda;Não
+Volkswagen;Tiguan;2.0 TSI 200cv Tiptronic;2012;130000;59900;;Automático;Flex;SUV;À venda;Não
+Fiat;Idea;Attractive 1.4 Fire Flex;2014;110000;39900;Preto;Manual;Flex;Hatch;À venda;Não
+Honda;HR-V;EX 1.8 CVT;2018;140000;99900;;Automático;Flex;SUV;À venda;Não
+Honda;Fit;LX 1.4 Flex;2009;240000;39900;Prata;Manual;Flex;Hatch;À venda;Não
+Chevrolet;Vectra;Elegance 2.0 Flexpower Aut.;2009;180000;45900;;Automático;Flex;Sedã;À venda;Não
+Jeep;Compass;Sport 2.0 Flex Aut.;2018;153000;86900;Branco;Automático;Flex;SUV;À venda;Não
+Renault;Duster;1.6 16V Hi-Flex;2014;250000;49900;;Manual;Flex;SUV;À venda;Não
+Ford;Fiesta;1.5 16V Flex;2014/2015;199300;42900;Vermelho;Manual;Flex;Hatch;À venda;Não
+Chevrolet;Classic;Advantage 1.0 Flexpower;2015;180000;32900;;Manual;Flex;Sedã;À venda;Não
+Volkswagen;Polo;1.6 Mi Total Flex;2012;170000;42900;;Manual;Flex;Hatch;À venda;Não
+Honda;Civic;LXS 1.8 i-VTEC Aut.;2007/2008;160000;47900;Prata;Automático;Flex;Sedã;À venda;Não
+Hyundai;IX35;GLS 2.0 Flex Aut.;2017/2018;143000;84900;Branco;Automático;Flex;SUV;À venda;Não
+Chevrolet;Equinox;Premier 2.0 AWD;2019;110107;109900;;Automático;Flex;SUV;À venda;Não
+Volkswagen;Fox;1.6 Mi Total Flex;2012/2013;189000;42900;Prata;Manual;Flex;Hatch;À venda;Não
+Chevrolet;Cobalt;LT 1.4 Econoflex;2014;142100;42900;;Manual;Flex;Sedã;À venda;Não
+Hyundai;HB20;Comfort Plus 1.0 Turbo Aut.;2025;36000;89900;;Automático;Flex;Hatch;À venda;Não
+Fiat;Idea;Attractive 1.4 Fire Flex;2012;180000;39900;Vermelho;Manual;Flex;Hatch;À venda;Não
+Chery;Tiggo 2;ACT 1.5 16V;2018/2019;84000;65900;Prata;Manual;Flex;SUV;À venda;Não
+Mitsubishi;L200;HPE 3.5 V6 Sport;2012/2013;138045;88900;Branco;Automático;Flex;Picape;À venda;Não
+Chevrolet;Onix;LT 1.0 8V;2012/2013;208798;40900;Preto;Manual;Flex;Hatch;À venda;Não

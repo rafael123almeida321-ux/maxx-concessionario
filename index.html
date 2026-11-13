@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Maxxs Work Multimarcas · Seminovos em São Miguel Paulista</title>
+  <meta name="description" content="Grupo Maxxs Work Multimarcas: seminovos e 0km com financiamento, compra e troca do seu carro. Av. Marechal Tito, 1881 e 2323, São Miguel Paulista, São Paulo.">
+  <meta name="theme-color" content="#111318">
+  <link rel="canonical" href="https://grupomaxxsworkmultimarcas.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Maxxs Work Multimarcas">
+  <meta property="og:title" content="Grupo Maxxs Work Multimarcas · Seminovos e 0km em São Miguel Paulista">
+  <meta property="og:description" content="Seminovos e 0km com financiamento, compra e troca do seu carro. Duas lojas na Av. Marechal Tito. Av. Marechal Tito, 1881 e 2323, São Miguel Paulista.">
+  <meta property="og:image" content="https://grupomaxxsworkmultimarcas.com.br/assets/img/og.jpg">
+  <meta property="og:url" content="https://grupomaxxsworkmultimarcas.com.br/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=4">
+</head>
+<body data-page="home">
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="hero hero-d hero-x">
+    <div class="hero-bg"></div>
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow reveal">Duas lojas na Av. Marechal Tito</span>
+        <h1><span class="line-in"><span data-hero-title>Carro bom para todo bolso.</span></span></h1>
+        <p class="lead reveal" style="--d:.25s" data-hero-sub></p>
+        <form class="quick-search reveal" style="--d:.35s" id="qs-form" aria-label="Busca rápida">
+          <select id="qs-marca" aria-label="Marca"></select>
+          <select id="qs-preco" aria-label="Preço máximo">
+            <option value="">Qualquer preço</option>
+            <option value="40000">Até R$ 40 mil</option>
+            <option value="60000">Até R$ 60 mil</option>
+            <option value="80000">Até R$ 80 mil</option>
+            <option value="100000">Até R$ 100 mil</option>
+          </select>
+          <button class="btn btn-gold" type="submit"><span data-icon="search"></span>Buscar</button>
+        </form>
+        <div class="quick-chips reveal" style="--d:.45s" id="quick-chips" aria-label="Atalhos do estoque"></div>
+        <div class="hero-actions reveal" style="--d:.55s">
+          <a class="btn btn-dark" href="venda-seu-carro.html"><span data-icon="swap"></span>Quero vender meu carro</a>
+          <a class="btn btn-ghost" href="#" data-wa-geral><span data-icon="wa"></span>Falar com a equipe</a>
+        </div>
+      </div>
+      <div class="reel reveal" style="--d:.2s">
+        <div class="reel-frame">
+          <img src="assets/img/vitrine.svg" alt="Grupo Maxxs Work Multimarcas: duas lojas na Av. Marechal Tito" loading="eager">
+        </div>
+        <div class="float-chip chip-a"><span class="ic" data-icon="clock"></span><div><b>Compra e troca</b><small>Avaliação na loja</small></div></div>
+        <div class="float-chip chip-b"><span class="ic" data-icon="key"></span><div><b>Duas lojas</b><small>Av. Marechal Tito</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NÚMEROS ===== -->
+  <section class="stats-band" aria-label="A Maxxs Work em números">
+    <div class="container stats-grid">
+      <div><b>0km</b><span>e seminovos de várias marcas</span></div>
+      <div><b><span data-count-estoque data-counter="0">0</span></b><span>carros prontos para levar</span></div>
+      <div><b>2</b><span>lojas na Av. Marechal Tito</span></div>
+      <div><b>6<small>dias</small></b><span>por semana: seg. a sáb., 8h30 às 18h</span></div>
+    </div>
+  </section>
+
+  <!-- ===== FAIXAS ===== -->
+  <section class="section faixas-sec">
+    <div class="container">
+      <div class="section-head">
+        <div class="reveal"><span class="eyebrow">Escolha pelo seu bolso</span><h2>Tem carro <span class="gold-text">pra você</span></h2></div>
+        <a class="btn btn-ghost reveal" href="estoque.html">Ver o estoque completo <span data-icon="arrow"></span></a>
+      </div>
+      <div class="faixas" id="faixas"></div>
+    </div>
+  </section>
+
+  <!-- ===== DESTAQUES ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head">
+        <div class="reveal"><span class="eyebrow">Destaques da semana</span><h2>Separados <span class="gold-text">para você</span></h2></div>
+        <a class="btn btn-ghost reveal" href="estoque.html">Ver todo o estoque <span data-icon="arrow"></span></a>
+      </div>
+      <div class="car-grid" id="destaques"></div>
+    </div>
+  </section>
+
+  <!-- ===== VENDA / TROCA ===== -->
+  <section class="section sell40">
+    <div class="container sell40-grid">
+      <div class="sell40-photo reveal-l"><img src="assets/img/troca.svg" alt="Avaliação do seu carro na Maxxs Work" loading="lazy"><span class="sell40-badge"><b>2</b>lojas</span></div>
+      <div>
+        <span class="eyebrow reveal">Quer vender o seu carro?</span>
+        <h2 class="reveal" style="margin:14px 0 22px">Venda ou troque<br><span class="gold-text">o seu carro</span></h2>
+        <p class="lead reveal">Sem anúncio, sem curioso e sem perder tempo. Você traz o carro, a nossa equipe avalia e você sai com a proposta. Se preferir, o valor entra como parte do pagamento do próximo.</p>
+        <div class="steps3 reveal">
+          <div><b>1</b><span>Mande fotos e dados do carro pelo WhatsApp</span></div>
+          <div><b>2</b><span>Traga para a avaliação na loja</span></div>
+          <div><b>3</b><span>Receba a proposta ou use na troca</span></div>
+        </div>
+        <div class="hero-actions reveal"><a class="btn btn-gold" href="venda-seu-carro.html">Avaliar meu carro <span data-icon="arrow"></span></a><a class="btn btn-ghost" href="#" data-wa-geral><span data-icon="wa"></span>Falar no WhatsApp</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PILARES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div class="reveal"><span class="eyebrow">Por que a Maxxs Work</span><h2>Do primeiro “oi”<br>à chave na mão</h2></div></div>
+      <div class="pillars">
+        <div class="pillar reveal"><div class="ic" data-icon="car"></div><h3>Carro para todo bolso</h3><p>Do primeiro carro ao SUV, com preço, fotos e quilometragem de cada um no site, sem surpresa na loja.</p></div>
+        <div class="pillar reveal" style="--d:.08s"><div class="ic" data-icon="swap"></div><h3>Troca e compra</h3><p>O seu carro entra como parte do pagamento, ou a gente compra ele. Avaliação feita aqui na loja.</p></div>
+        <div class="pillar reveal" style="--d:.16s"><div class="ic" data-icon="coin"></div><h3>Condição clara</h3><p>À vista, troca ou financiamento com bancos parceiros para os carros elegíveis, sempre sujeito à análise de crédito.</p></div>
+        <div class="pillar reveal" style="--d:.24s"><div class="ic" data-icon="star"></div><h3>Duas lojas, um grupo</h3><p>Maxxs Multimarcas e Work Multimarcas, lado a lado na Av. Marechal Tito, em São Miguel Paulista.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CARTA DA LOJA ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="letter-card reveal">
+        <span class="eyebrow">Sua parceira no carro</span>
+        <h2 style="margin:14px 0 24px">Aqui você não é<br><span class="gold-text">só mais um cliente</span></h2>
+        <div class="letter-body"><div id="carta-texto"></div>
+          <div class="letter-sign"><div><b class="sign-name">Equipe Maxxs Work</b><small>Av. Marechal Tito, São Miguel Paulista</small></div><a class="btn btn-gold btn-sm" href="#" data-agendar><span data-icon="cal"></span>Agendar uma visita</a></div>
+        </div>
+        <div class="values">
+          <div><span data-icon="key"></span><p style="margin:0"><b>Parceria</b><span>Compra, venda e troca</span></p></div>
+          <div><span data-icon="shield"></span><p style="margin:0"><b>Transparência</b><span>Tudo explicado antes de assinar</span></p></div>
+          <div><span data-icon="clock"></span><p style="margin:0"><b>Agilidade</b><span>Atendimento e avaliação rápidos</span></p></div>
+          <div><span data-icon="car"></span><p style="margin:0"><b>0km e seminovos</b><span>Várias marcas e faixas de preço</span></p></div>
+        </div>
+        <a class="btn btn-ghost" href="loja.html" style="margin-top:26px">Conheça a Maxxs Work <span data-icon="arrow"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENTREGAS (vem do painel) ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head"><div class="reveal"><span class="eyebrow">Cada entrega é uma festa</span><h2>Sonho realizado <span class="gold-text">é aqui</span></h2></div><a class="btn btn-ghost reveal" href="https://instagram.com/maxxs_multimarcas_1" data-cfg-ig target="_blank" rel="noopener"><span data-icon="ig"></span>Siga no Instagram</a></div>
+      <div class="mosaic reveal" id="entregas"></div>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS (só aparece quando cadastrados no painel) ===== -->
+  <section class="section" id="depoimentos" style="padding-top:0">
+    <div class="container">
+      <div class="section-head"><div class="reveal"><span class="eyebrow">Quem comprou, recomenda</span><h2>Clientes <span class="gold-text">Maxxs Work</span></h2></div></div>
+      <div class="testi" id="dep-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== COMO COMPRAR ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head"><div class="reveal"><span class="eyebrow">Simples assim</span><h2>Seu carro em 4 passos</h2></div><a class="btn btn-ghost reveal" href="#" data-agendar><span data-icon="cal"></span>Agendar visita</a></div>
+      <div class="how">
+        <div class="reveal"><b>Escolha o carro</b><span>Pelo estoque do site ou pedindo para a nossa equipe encontrar o carro certo.</span></div>
+        <div class="reveal" style="--d:.08s"><b>Veja a condição</b><span>À vista, com troca ou com a pré-análise de crédito, quando o carro for elegível.</span></div>
+        <div class="reveal" style="--d:.16s"><b>Traga sua troca</b><span>Avaliamos o seu carro na loja e o valor entra no pagamento.</span></div>
+        <div class="reveal" style="--d:.24s"><b>Saia de chave na mão</b><span>Documentação feita aqui, com segurança, e o carro entregue para você.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIMULADOR ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="sim reveal" id="sim">
+        <div class="sim-left">
+          <span class="eyebrow">Simulador</span>
+          <h2 style="margin:14px 0 28px;font-size:clamp(26px,3vw,40px)">Quanto fica a parcela do seu próximo carro?</h2>
+          <div class="field"><label>Valor do carro <b data-sim-lv></b></label><input type="range" min="20000" max="120000" step="1000" data-sim-valor aria-label="Valor do carro"></div>
+          <div class="field"><label>Entrada <b data-sim-le></b></label><input type="range" min="0" max="40000" step="1000" value="0" data-sim-entrada aria-label="Valor da entrada"></div>
+          <div class="field"><label>Prazo</label><div class="seg" data-sim-meses><button type="button">24x</button><button type="button">36x</button><button type="button">48x</button><button type="button" class="on">60x</button></div></div>
+        </div>
+        <div class="sim-right sim-result">
+          <small>Parcela estimada</small>
+          <div class="big gold-text" data-sim-out>—</div>
+          <p data-sim-info></p>
+          <button class="btn btn-wa" id="sim-cta" style="margin-top:18px;align-self:flex-start"><span data-icon="wa"></span>Quero fazer a análise</button>
+          <p style="margin-top:16px">*Simulação ilustrativa para carros elegíveis ao financiamento, sujeita à análise de crédito. A taxa final depende do banco e do perfil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head" style="justify-content:center;text-align:center"><div class="reveal"><span class="eyebrow">Tire suas dúvidas</span><h2>Perguntas frequentes</h2></div></div>
+      <div class="faq"><details class="reveal"><summary>Preciso dar entrada para comprar o carro?</summary><p>Depende do carro e da análise de crédito. Nos carros mais novos há mais opções de financiamento com os bancos parceiros, inclusive com entrada menor para quem for aprovado. Nos mais antigos, o pagamento costuma ser à vista ou com o seu carro na troca. A gente te mostra as opções reais de cada carro.</p></details><details class="reveal"><summary>Vocês compram o meu carro?</summary><p>Sim. Mande fotos e os dados do carro pelo WhatsApp, traga para a avaliação na loja e você sai com a proposta. O valor também pode entrar como parte do pagamento do próximo carro.</p></details><details class="reveal"><summary>Todo carro do estoque pode ser financiado?</summary><p>Não. Cada banco tem regras próprias de idade do veículo e de perfil. Na página de cada carro mostramos se ele tem financiamento disponível ou se a condição é à vista ou com troca.</p></details><details class="reveal"><summary>Tenho restrição no nome. Consigo financiar?</summary><p>Cada caso é analisado individualmente pelos bancos. Faça a pré-análise, sem compromisso, e a nossa equipe te explica com clareza o que é possível.</p></details><details class="reveal"><summary>Posso fazer test drive?</summary><p>Pode e deve! Agende pelo site ou pelo WhatsApp e deixamos o carro separado esperando por você.</p></details><details class="reveal"><summary>Onde fica a loja?</summary><p>São duas lojas na Av. Marechal Tito, em São Miguel Paulista: Work Multimarcas no nº 1881 e Maxxs Multimarcas no nº 2323. Segunda a sábado, das 8h30 às 18h.</p></details></div>
+    </div>
+  </section>
+
+  <!-- ===== LOJA ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head"><div class="reveal"><span class="eyebrow">Venha nos visitar</span><h2>A nossa loja</h2></div></div>
+      <div class="store">
+        <div class="store-brand reveal"><img src="assets/img/logo-branco.svg" alt="Maxxs Work Multimarcas"><p>Compra, venda e troca<br><span>com financiamento</span></p><small>Av. Marechal Tito, 1881 e 2323 · São Miguel Paulista</small></div>
+        <div class="store-info reveal" style="--d:.1s">
+          <div class="info-row"><span class="ic" data-icon="pin"></span><div><small>Endereço</small><b>Av. Marechal Tito, 1881 e 2323</b><br><span style="color:var(--muted)"><span data-cfg="bairro"></span> · <span data-cfg="cidade"></span></span></div></div>
+          <div class="info-row"><span class="ic" data-icon="wa"></span><div><small>WhatsApp</small><b data-cfg="whatsappExibicao"></b></div></div>
+          <div class="info-row"><span class="ic" data-icon="phone"></span><div><small>Telefone</small><a data-cfg-tel href="#"><b data-cfg="telefone"></b></a></div></div>
+          <div class="info-row"><span class="ic" data-icon="clock"></span><div><small>Horário</small><b data-cfg="horario"></b></div></div>
+          <div style="display:grid;gap:10px;margin-top:auto"><a class="btn btn-gold" href="#" data-agendar><span data-icon="cal"></span>Agendar minha visita</a><a class="btn btn-ghost" href="contato.html">Como chegar <span data-icon="arrow"></span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="assets/js/store.js?v=2"></script>
+<script src="assets/js/site.js?v=1"></script>
+</body>
+</html>

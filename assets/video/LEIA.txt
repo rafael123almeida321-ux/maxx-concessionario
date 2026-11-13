@@ -1,0 +1,2 @@
+Coloque aqui os vídeos do Google Flow (ex.: hero.mp4, até 3 MB, sem som, 6-10 s).
+Depois, no painel: Configurações → Vídeo do topo da home → assets/video/hero.mp4

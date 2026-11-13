@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Financiamento e pré-análise · Maxxs Work Multimarcas</title>
+  <meta name="description" content="Faça sua pré-análise de crédito em 30 segundos e simule o financiamento do seu carro na Maxxs Work Multimarcas.">
+  <meta name="theme-color" content="#111318">
+  <link rel="canonical" href="https://grupomaxxsworkmultimarcas.com.br/financiamento.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Maxxs Work Multimarcas">
+  <meta property="og:title" content="Financiamento e pré-análise · Maxxs Work Multimarcas">
+  <meta property="og:description" content="Faça sua pré-análise de crédito em 30 segundos e simule o financiamento do seu carro na Maxxs Work Multimarcas.">
+  <meta property="og:image" content="https://grupomaxxsworkmultimarcas.com.br/assets/img/og.jpg">
+  <meta property="og:url" content="https://grupomaxxsworkmultimarcas.com.br/financiamento.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=4">
+</head>
+<body data-page="financiamento">
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a> / <span>Financiamento</span></nav>
+      <h1 class="reveal">Financie <span class="gold-text">com clareza</span></h1>
+      <p class="lead reveal">Responda 6 perguntas e a equipe da Maxxs Work consulta os bancos parceiros para o seu perfil. Sem compromisso e sujeito à análise de crédito.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:50px">
+    <div class="container">
+      <div class="two-col">
+        <div class="quiz reveal" id="quiz">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><span class="quiz-count" id="qz-count"></span><button class="btn btn-ghost btn-sm" id="qz-back" type="button">Voltar</button></div>
+          <div class="quiz-bar"><i></i></div>
+          <div class="quiz-step" data-k="carro"><span class="eyebrow">Pré-análise de crédito</span><h3>Qual carro você quer?</h3><div class="field"><select class="select" id="qz-carro" aria-label="Carro de interesse"></select></div><button class="btn btn-gold btn-block" type="button" id="qz-next-car">Continuar <span data-icon="arrow"></span></button></div>
+          <div class="quiz-step" data-k="entrada"><h3>Quanto você pode dar de entrada?</h3><div class="opts"><button type="button" data-v="Sem entrada">Sem entrada<small>Quero financiar 100%</small></button><button type="button" data-v="Até R$ 5 mil">Até R$ 5 mil</button><button type="button" data-v="R$ 5 a 15 mil">R$ 5 a 15 mil</button><button type="button" data-v="Mais de R$ 15 mil">Mais de R$ 15 mil</button></div></div>
+          <div class="quiz-step" data-k="troca"><h3>Tem carro para dar na troca?</h3><div class="opts"><button type="button" data-v="Sim">Sim, tenho<small>Ele entra no pagamento</small></button><button type="button" data-v="Não">Não tenho</button></div></div>
+          <div class="quiz-step" data-k="renda"><h3>Qual a sua renda mensal?</h3><div class="opts"><button type="button" data-v="Até R$ 2.500">Até R$ 2.500</button><button type="button" data-v="R$ 2.500 a 4.000">R$ 2.500 a R$ 4.000</button><button type="button" data-v="R$ 4.000 a 7.000">R$ 4.000 a R$ 7.000</button><button type="button" data-v="Acima de R$ 7.000">Acima de R$ 7.000</button></div></div>
+          <div class="quiz-step" data-k="cnh"><h3>Você tem CNH?</h3><div class="opts"><button type="button" data-v="Sim">Sim</button><button type="button" data-v="Ainda não">Ainda não<small>Tudo bem, dá pra resolver</small></button></div></div>
+          <div class="quiz-step"><h3>Pra quem a gente manda o resultado?</h3><form id="qz-form"><div class="field"><label for="qz-nome">Seu nome</label><input class="input" id="qz-nome" required autocomplete="name"></div><div class="field"><label for="qz-tel">WhatsApp</label><input class="input" id="qz-tel" required inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000"></div><button class="btn btn-gold btn-block" type="submit"><span data-icon="wa"></span>Ver meu resultado</button><p class="notice">Seus dados são usados só para a análise de crédito e para o nosso contato.</p></form></div>
+          <div class="quiz-step" id="qz-result"></div>
+        </div>
+        <div>
+          <div class="sim reveal" id="sim" style="grid-template-columns:1fr">
+            <div class="sim-left">
+              <span class="eyebrow">Simulador rápido</span>
+              <h2 style="margin:14px 0 24px;font-size:clamp(24px,2.6vw,32px)">Monte a sua parcela</h2>
+              <div class="field"><label>Valor do carro <b data-sim-lv></b></label><input type="range" min="30000" max="250000" step="1000" data-sim-valor aria-label="Valor do carro"></div>
+              <div class="field"><label>Entrada <b data-sim-le></b></label><input type="range" min="0" max="50000" step="1000" value="0" data-sim-entrada aria-label="Entrada"></div>
+              <div class="field"><label>Prazo</label><div class="seg" data-sim-meses><button type="button">24x</button><button type="button">36x</button><button type="button">48x</button><button type="button" class="on">60x</button></div></div>
+            </div>
+            <div class="sim-right sim-result" style="border-left:0;border-top:1px solid var(--line)">
+              <small>Parcela estimada</small>
+              <div class="big gold-text" data-sim-out>—</div>
+              <p data-sim-info></p>
+              <p>*Simulação ilustrativa. Taxa final depende da análise do banco.</p>
+            </div>
+          </div>
+          <div class="steps reveal">
+            <div class="step"><span class="n">1</span><div><b>Você responde o quiz</b><span>Leva 30 segundos.</span></div></div>
+            <div class="step"><span class="n">2</span><div><b>A gente consulta os bancos</b><span>Buscamos a melhor condição pro seu perfil.</span></div></div>
+            <div class="step"><span class="n">3</span><div><b>Você escolhe o carro</b><span>Com o crédito na mão, é só escolher.</span></div></div>
+            <div class="step"><span class="n">4</span><div><b>Sai com a chave</b><span>Documentação feita aqui mesmo, com segurança.</span></div></div>
+          </div>
+          <div class="note-card reveal"><b>Quais carros podem ser financiados?</b><p>Cada banco tem regras próprias de idade do carro e de perfil. Em geral, os carros mais novos têm mais opções de financiamento; nos mais antigos, o pagamento costuma ser à vista ou com o seu carro na troca. Na página de cada carro mostramos a condição dele.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="assets/js/store.js?v=2"></script>
+<script src="assets/js/site.js?v=1"></script>
+</body>
+</html>
