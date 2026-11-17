@@ -20,53 +20,62 @@
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=4">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
 </head>
-<body data-page="home">
+<body data-page="home" class="dark-top">
 <main>
-  <!-- ===== HERO ===== -->
-  <section class="hero hero-d hero-x">
-    <div class="hero-bg"></div>
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow reveal">Duas lojas na Av. Marechal Tito</span>
-        <h1><span class="line-in"><span data-hero-title>Carro bom para todo bolso.</span></span></h1>
-        <p class="lead reveal" style="--d:.25s" data-hero-sub></p>
-        <form class="quick-search reveal" style="--d:.35s" id="qs-form" aria-label="Busca rápida">
-          <select id="qs-marca" aria-label="Marca"></select>
-          <select id="qs-preco" aria-label="Preço máximo">
-            <option value="">Qualquer preço</option>
-            <option value="40000">Até R$ 40 mil</option>
-            <option value="60000">Até R$ 60 mil</option>
-            <option value="80000">Até R$ 80 mil</option>
-            <option value="100000">Até R$ 100 mil</option>
-          </select>
-          <button class="btn btn-gold" type="submit"><span data-icon="search"></span>Buscar</button>
-        </form>
-        <div class="quick-chips reveal" style="--d:.45s" id="quick-chips" aria-label="Atalhos do estoque"></div>
-        <div class="hero-actions reveal" style="--d:.55s">
-          <a class="btn btn-dark" href="venda-seu-carro.html"><span data-icon="swap"></span>Quero vender meu carro</a>
-          <a class="btn btn-ghost" href="#" data-wa-geral><span data-icon="wa"></span>Falar com a equipe</a>
+  <!-- ===== HERO · VITRINE (carros reais do estoque, escolhidos em site.js → showroom()) ===== -->
+  <section class="showroom" aria-label="Carros na vitrine">
+    <div class="sr-stage">
+      <div class="sr-slash" aria-hidden="true"></div>
+      <div class="container sr-grid">
+        <div class="sr-copy">
+          <p class="sr-where"><span data-icon="pin"></span>Duas lojas na Av. Marechal Tito, São Miguel Paulista</p>
+          <h1 data-hero-title>Seu próximo carro está na Marechal Tito.</h1>
+          <p class="sr-lead" data-hero-sub></p>
+          <div class="sr-actions">
+            <a class="btn btn-gold" href="estoque.html" data-sr-total>Ver o estoque</a>
+            <a class="btn btn-onDark" href="#" data-wa-geral><span data-icon="wa"></span>Falar no WhatsApp</a>
+          </div>
+        </div>
+        <div class="sr-car" id="sr-car" aria-live="polite">
+          <a class="sr-photo" id="sr-link" href="estoque.html"><img id="sr-img" src="assets/img/vitrine.svg" alt="" width="800" height="600" fetchpriority="high"></a>
+          <div class="sr-plate">
+            <span class="sr-label">Na vitrine</span>
+            <h2 id="sr-name">Carregando a vitrine</h2>
+            <p id="sr-ver"></p>
+            <div class="sr-meta" id="sr-meta"></div>
+            <div class="sr-price"><b id="sr-price"></b><small id="sr-cond"></small></div>
+          </div>
         </div>
       </div>
-      <div class="reel reveal" style="--d:.2s">
-        <div class="reel-frame">
-          <img src="assets/img/vitrine.svg" alt="Grupo Maxxs Work Multimarcas: duas lojas na Av. Marechal Tito" loading="eager">
-        </div>
-        <div class="float-chip chip-a"><span class="ic" data-icon="clock"></span><div><b>Compra e troca</b><small>Avaliação na loja</small></div></div>
-        <div class="float-chip chip-b"><span class="ic" data-icon="key"></span><div><b>Duas lojas</b><small>Av. Marechal Tito</small></div></div>
-      </div>
+      <div class="container"><div class="sr-thumbs" id="sr-thumbs" role="tablist" aria-label="Escolha um carro da vitrine"></div></div>
+    </div>
+    <div class="container sr-search">
+      <form class="quick-search" id="qs-form" aria-label="Busca rápida">
+        <select id="qs-marca" aria-label="Marca"></select>
+        <select id="qs-preco" aria-label="Preço máximo">
+          <option value="">Qualquer preço</option>
+          <option value="40000">Até R$ 40 mil</option>
+          <option value="60000">Até R$ 60 mil</option>
+          <option value="80000">Até R$ 80 mil</option>
+          <option value="100000">Até R$ 100 mil</option>
+        </select>
+        <button class="btn btn-gold" type="submit"><span data-icon="search"></span>Buscar carro</button>
+      </form>
+      <div class="quick-chips" id="quick-chips" aria-label="Atalhos do estoque"></div>
     </div>
   </section>
 
   <!-- ===== NÚMEROS ===== -->
-  <section class="stats-band" aria-label="A Maxxs Work em números">
+  <section class="stats-band" aria-label="O estoque em números">
     <div class="container stats-grid">
-      <div><b>0km</b><span>e seminovos de várias marcas</span></div>
-      <div><b><span data-count-estoque data-counter="0">0</span></b><span>carros prontos para levar</span></div>
-      <div><b>2</b><span>lojas na Av. Marechal Tito</span></div>
-      <div><b>6<small>dias</small></b><span>por semana: seg. a sáb., 8h30 às 18h</span></div>
+      <div><b data-stat="carros">0</b><span>carros prontos para levar</span></div>
+      <div><b data-stat="marcas">0</b><span>marcas diferentes no pátio</span></div>
+      <div><b data-stat="apartir">R$ 0</b><span>o mais em conta do estoque</span></div>
+      <div><b>2</b><span>lojas na Av. Marechal Tito, 1881 e 2323</span></div>
     </div>
+    <div class="container brand-rail" id="brand-rail" aria-label="Marcas no estoque"></div>
   </section>
 
   <!-- ===== FAIXAS ===== -->
@@ -219,6 +228,6 @@
   </section>
 </main>
 <script src="assets/js/store.js?v=3"></script>
-<script src="assets/js/site.js?v=1"></script>
+<script src="assets/js/site.js?v=3"></script>
 </body>
 </html>

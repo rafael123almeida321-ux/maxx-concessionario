@@ -224,7 +224,7 @@
     var sk = document.createElement('a'); sk.className = 'skip-link'; sk.href = '#conteudo'; sk.textContent = 'Pular para o conteúdo'; document.body.prepend(sk);
     var main = $('main'); if (main) main.id = 'conteudo';
     var h = document.createElement('header'); h.className = 'site-header';
-    h.innerHTML = '<div class="container nav"><a class="brand" href="index.html" aria-label="' + esc(cfg.loja) + ' — início"><img src="' + esc(cfg.logo) + '" alt="' + esc(cfg.loja) + '" width="150" height="50"></a>' +
+    h.innerHTML = '<div class="container nav"><a class="brand" href="index.html" aria-label="' + esc(cfg.loja) + ' — início"><img class="logo-claro" src="' + esc(cfg.logo) + '" alt="' + esc(cfg.loja) + '" width="150" height="50"><img class="logo-escuro" src="' + esc(cfg.logoRodape || cfg.logo) + '" alt="" aria-hidden="true" width="150" height="50"></a>' +
       '<nav class="nav-links" aria-label="Principal">' + links + '</nav>' +
       '<div class="nav-cta"><button class="icon-btn" data-open-favs aria-label="Meus favoritos">' + I.heart + '<span class="cnt fav-count"></span></button><a class="btn btn-ghost btn-sm" href="#" data-agendar>' + I.cal + 'Agendar visita</a><a class="btn btn-wa btn-sm" href="#" data-wa-geral>' + I.wa + '<span>WhatsApp</span></a>' +
       '<button class="burger" aria-label="Abrir menu" aria-expanded="false"><span></span></button></div></div>';
@@ -368,6 +368,52 @@
       bt.setAttribute('aria-label', on ? 'Desligar o som' : 'Ativar o som'); track('video_som');
     });
   }
+
+  /* ---------- vitrine do topo: carros reais do estoque (os destaques mais caros com foto) ---------- */
+  function showroom(v) {
+    var tot = $('[data-sr-total]'); if (tot) tot.textContent = 'Ver os ' + v.length + ' carros';
+    var lista = v.filter(function (c) { return c.destaque && temFoto(c); }).sort(function (a, b) { return b.preco - a.preco; });
+    if (lista.length < 3) lista = v.filter(temFoto).sort(function (a, b) { return b.preco - a.preco; });
+    lista = lista.slice(0, 5);
+    var box = $('#sr-car'); if (!box || !lista.length) { if (box) box.style.display = 'none'; return; }
+    var img = $('#sr-img'), i = 0, timer = null, reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var th = $('#sr-thumbs');
+    th.innerHTML = lista.map(function (c, k) {
+      return '<button type="button" role="tab" data-k="' + k + '" aria-selected="' + (k === 0) + '"><img src="' + esc(D.carroFoto(c)) + '" alt="" loading="lazy"><span><b>' + esc(c.modelo) + '</b><small>' + esc(c.marca) + ' · ' + D.brl(c.preco) + '</small></span></button>';
+    }).join('');
+    function mostra(k, user) {
+      i = (k + lista.length) % lista.length; var c = lista[i];
+      box.classList.add('troca');
+      setTimeout(function () {
+        img.src = D.carroFoto(c); img.alt = D.carroNome(c);
+        $('#sr-link').href = carUrl(c);
+        $('#sr-name').textContent = D.carroTitulo(c);
+        $('#sr-ver').textContent = c.versao;
+        $('#sr-meta').innerHTML = [c.anoFab + '/' + c.anoMod, D.km(c.km), c.cambio, c.cor].filter(Boolean).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('');
+        $('#sr-price').textContent = D.brl(c.preco);
+        $('#sr-cond').textContent = condTxt(c);
+        box.classList.remove('troca');
+      }, reduz ? 0 : 220);
+      $$('button', th).forEach(function (b, n) { b.setAttribute('aria-selected', n === i); });
+      if (user) track('vitrine_topo', { carro: D.carroNome(c) });
+    }
+    function auto() { clearInterval(timer); if (!reduz) timer = setInterval(function () { mostra(i + 1); }, 6500); }
+    th.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; mostra(+b.getAttribute('data-k'), true); auto(); });
+    box.addEventListener('mouseenter', function () { clearInterval(timer); });
+    box.addEventListener('mouseleave', auto);
+    lista.slice(1).forEach(function (c) { var x = new Image(); x.src = D.carroFoto(c); });
+    mostra(0); auto();
+  }
+  function numerosHome(v) {
+    var marcas = {}; v.forEach(function (c) { marcas[c.marca] = (marcas[c.marca] || 0) + 1; });
+    var min = v.reduce(function (m, c) { return c.preco && c.preco < m ? c.preco : m; }, Infinity);
+    var set = function (k, t) { var el = $('[data-stat="' + k + '"]'); if (el) el.textContent = t; };
+    set('carros', v.length); set('marcas', Object.keys(marcas).length); set('apartir', isFinite(min) ? D.brl(min) : '—');
+    var rail = $('#brand-rail');
+    if (rail) rail.innerHTML = Object.keys(marcas).sort(function (a, b) { return marcas[b] - marcas[a] || a.localeCompare(b); }).map(function (m) {
+      return '<a href="estoque.html?marca=' + encodeURIComponent(m) + '">' + esc(m) + '<small>' + marcas[m] + '</small></a>';
+    }).join('');
+  }
   /* faixas do estoque: atalhos da home e do hero */
   var FAIXAS = [
     { t: 'Até R$ 40 mil', s: 'Primeiro carro e economia', q: 'ate=40000', f: function (c) { return c.preco <= 40000; } },
@@ -391,8 +437,9 @@
     intro();
     var v = D.vitrine();
     if (cfg.videoHero) { var bg = $('.hero-bg'); bg.innerHTML = '<video autoplay muted loop playsinline src="' + esc(cfg.videoHero) + '"></video>'; }
-    var hd = cfg.heroDestaque || ''; $('[data-hero-title]').innerHTML = hd ? esc(cfg.heroTitulo).replace(esc(hd), '<em class="gold-text shine">' + esc(hd) + '</em>') : esc(cfg.heroTitulo);
-    reel();
+    $('[data-hero-title]').textContent = cfg.heroTitulo;
+    showroom(v);
+    numerosHome(v);
     $('[data-hero-sub]').textContent = cfg.heroSub;
     var marcas = Array.from(new Set(v.map(function (c) { return c.marca; }))).sort();
     $('#qs-marca').innerHTML = '<option value="">Todas as marcas</option>' + marcas.map(function (m) { return '<option>' + esc(m) + '</option>'; }).join('');
